@@ -19,7 +19,7 @@ when '-l'
     emojis.keys.each_slice(4) do |keys|
       keys.each do |key|
         value = emojis[key]
-        print "#{value ? value : '  '}: #{key.to_s.ljust(max_name_size)}"
+        print "#{value ? value : '  '}  #{key.to_s.ljust(max_name_size)}"
       end
       puts
     end
