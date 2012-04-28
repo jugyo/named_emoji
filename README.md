@@ -1,6 +1,6 @@
 # NamedEmoji
 
-Named Emojis for the emojis on Campfire and GitHub.
+Named Emojis for OSX. Emojis are from Campfire and GitHub.
 
 See also: [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/)
 
