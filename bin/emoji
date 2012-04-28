@@ -1,0 +1,34 @@
+#!/usr/bin/evn ruby
+
+unless ARGV.size == 1
+  abort <<-D
+usage: emoji name
+       emoji -l
+  D
+end 
+
+require 'named_emoji'
+
+case ARGV[0]
+when '-l'
+  max_name_size = NamedEmoji::ALL.keys.map {|i| i.size}.max
+  %w(PEOPLE NATURE OBJECTS PLACES SYMBOLS).each do |category|
+    puts category + ":"
+    puts
+    emojis = NamedEmoji.const_get(category.upcase)
+    emojis.keys.each_slice(4) do |keys|
+      keys.each do |key|
+        value = emojis[key]
+        print "#{value ? value : '  '}: #{key.to_s.ljust(max_name_size)}"
+      end
+      puts
+    end
+    puts
+  end
+else
+  if emoji = NamedEmoji[ARGV[0]]
+    print emoji
+  else
+    warn "Emoji not found :("
+  end
+end
