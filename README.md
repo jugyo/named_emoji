@@ -23,6 +23,12 @@ List available emojis:
 
     $ emoji -l
 
+## Cheat Sheet
+
+[emojis.png](https://github.com/jugyo/named_emoji/raw/master/emojis.pdf)
+
+![Emojis](https://github.com/jugyo/named_emoji/raw/master/emojis.png)
+
 ## Contributing
 
 1. Fork it
