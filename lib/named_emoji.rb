@@ -63,7 +63,7 @@ module NamedEmoji
     :'hankey'                   => "\u{1F4A9}",
     :'poop'                     => "\u{1F4A9}",
     :'shit'                     => "\u{1F4A9}",
-    :'+1'                       => nil,
+    :'+1'                       => "\u{1F44D}",
     :'thumbsup'                 => "\u{1F44D}",
     :'-1'                       => "\u{1F44E}",
     :'thumbsdown'               => "\u{1F44E}",
