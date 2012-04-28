@@ -4,7 +4,7 @@ require File.expand_path('../lib/named_emoji/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["jugyo"]
   gem.email         = ["jugyo.org@gmail.com"]
-  gem.description   = %q{Named Emojis for Mac OSX Lion and Later. Emojis are from Campfire and GitHub.}
+  gem.description   = %q{Named Emojis for Mac OSX Lion and Later. Emoji's names are from Campfire and GitHub.}
   gem.summary       = %q{Named Emojis for Mac OSX Lion and Later}
   gem.homepage      = ""
 

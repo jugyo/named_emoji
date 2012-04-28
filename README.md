@@ -1,6 +1,6 @@
 # NamedEmoji
 
-Named Emojis for Mac OSX Lion and Later. Emojis are from Campfire and GitHub.
+Named Emojis for Mac OSX Lion and Later. Emoji's names are from Campfire and GitHub.
 
 See also: [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/)
 
