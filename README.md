@@ -25,9 +25,7 @@ List available emojis:
 
 ## Cheat Sheet
 
-[emojis.png](https://github.com/jugyo/named_emoji/raw/master/emojis.pdf)
-
-![Emojis](https://github.com/jugyo/named_emoji/raw/master/emojis.png)
+[<img src="https://github.com/jugyo/named_emoji/raw/master/emojis.png" title="Cheat Sheet" />](https://github.com/jugyo/named_emoji/raw/master/emojis.pdf)
 
 ## Contributing
 
