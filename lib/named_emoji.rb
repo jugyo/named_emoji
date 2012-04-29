@@ -517,4 +517,10 @@ module NamedEmoji
   def self.[](name)
     ALL[name.to_sym]
   end
+
+  def self.each(&block)
+    ALL.each(&block)
+  end
+
+  extend Enumerable
 end
