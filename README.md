@@ -11,8 +11,12 @@ See also: [Emoji cheat sheet](http://www.emoji-cheat-sheet.com/)
 ## Usage
 
     require 'named_emoji'
-    puts NamedEmoji[:smile]
+    puts NamedEmoji.emojis[:smile]
     # => Ì†ΩÌ∏Ñ
+
+    include NamedEmoji
+    emojis[:grin]
+    # => Ì†ΩÌ∏Å
 
 As command line tool:
 

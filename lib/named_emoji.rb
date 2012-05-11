@@ -2,7 +2,7 @@ require "named_emoji/version"
 
 module NamedEmoji
   PEOPLE = {
-    :'bowtie'                   => nil,
+    # :'bowtie'                   => nil,
     :'smile'                    => "\u{1F604}",
     :'blush'                    => "\u{1F60A}",
     :'smiley'                   => "\u{1F603}",
@@ -47,11 +47,11 @@ module NamedEmoji
     :'heartpulse'               => "\u{1F497}",
     :'cupid'                    => "\u{1F498}",
     :'sparkles'                 => "\u{2728}",
-    :'star'                     => nil,
+    # :'star'                     => nil,
     :'star2'                    => "\u{1F31F}",
     :'anger'                    => "\u{1F4A2}",
-    :'exclamation'              => nil,
-    :'question'                 => nil,
+    # :'exclamation'              => nil,
+    # :'question'                 => nil,
     :'grey_exclamation'         => "\u{2755}",
     :'grey_question'            => "\u{2754}",
     :'zzz'                      => "\u{1F4A4}",
@@ -83,7 +83,7 @@ module NamedEmoji
     :'point_up_2'               => "\u{1F446}",
     :'clap'                     => "\u{1F44F}",
     :'muscle'                   => "\u{1F4AA}",
-    :'metal'                    => nil,
+    # :'metal'                    => nil,
     :'walking'                  => "\u{1F6B6}",
     :'runner'                   => "\u{1F3C3}",
     :'couple'                   => "\u{1F46B}",
@@ -120,17 +120,17 @@ module NamedEmoji
     :'ear'                      => "\u{1F442}",
     :'eyes'                     => "\u{1F440}",
     :'nose'                     => "\u{1F443}",
-    :'feelsgood'                => nil,
-    :'finnadie'                 => nil,
-    :'goberserk'                => nil,
-    :'godmode'                  => nil,
-    :'hurtrealbad'              => nil,
-    :'rage1'                    => nil,
-    :'rage2'                    => nil,
-    :'rage3'                    => nil,
-    :'rage4'                    => nil,
-    :'suspect'                  => nil,
-    :'trollface'                => nil,
+    # :'feelsgood'                => nil,
+    # :'finnadie'                 => nil,
+    # :'goberserk'                => nil,
+    # :'godmode'                  => nil,
+    # :'hurtrealbad'              => nil,
+    # :'rage1'                    => nil,
+    # :'rage2'                    => nil,
+    # :'rage3'                    => nil,
+    # :'rage4'                    => nil,
+    # :'suspect'                  => nil,
+    # :'trollface'                => nil,
   }
 
   NATURE = {
@@ -333,7 +333,7 @@ module NamedEmoji
   }
 
   PLACES = {
-    :'109'                      => nil,
+    # :'109'                      => nil,
     :'house'                    => "\u{1F3E0}",
     :'school'                   => "\u{1F3EB}",
     :'office'                   => "\u{1F3E2}",
@@ -509,18 +509,17 @@ module NamedEmoji
     :'copyright'                => "\u{00A9}",
     :'registered'               => "\u{00AE}",
     :'tm'                       => "\u{2122}",
-    :'shipit'                   => nil,
+    # :'shipit'                   => nil,
   }
 
-  ALL = PEOPLE.merge(NATURE).merge(OBJECTS).merge(PLACES).merge(SYMBOLS)
-
   def self.[](name)
-    ALL[name.to_sym]
+    warn '`.[]` is deprecated. Please use `.emojis[]` instead'
+    emojis[name.to_sym]
   end
 
-  def self.each(&block)
-    ALL.each(&block)
+  def emojis
+    @all ||= PEOPLE.merge(NATURE).merge(OBJECTS).merge(PLACES).merge(SYMBOLS)
   end
 
-  extend Enumerable
+  extend self
 end

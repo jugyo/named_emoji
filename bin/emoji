@@ -11,7 +11,7 @@ require 'named_emoji'
 
 case ARGV[0]
 when '-l'
-  max_name_size = NamedEmoji::ALL.keys.map {|i| i.size}.max
+  max_name_size = NamedEmoji.emojis.keys.map {|i| i.size}.max
   %w(PEOPLE NATURE OBJECTS PLACES SYMBOLS).each do |category|
     puts category + ":"
     puts
@@ -26,7 +26,7 @@ when '-l'
     puts
   end
 else
-  if emoji = NamedEmoji[ARGV[0]]
+  if emoji = NamedEmoji.emojis[ARGV[0].to_sym]
     print emoji
   else
     warn "Emoji not found :("
