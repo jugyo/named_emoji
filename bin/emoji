@@ -1,4 +1,4 @@
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 
 unless ARGV.size == 1
   abort <<-D
